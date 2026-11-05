@@ -1,0 +1,13 @@
+---
+description: Cascade dev flow for a lead agent that launches Cursor cloud agents
+alwaysApply: false
+---
+
+When you delegate coding work to cloud agents:
+
+- Write a brief using templates/brief.md before launching.
+- Start at the cheapest tier that fits (see docs/routing.md): composer-2.5, then grok-4.7, then Anthropic models only if needed.
+- At most 2 attempts per tier; escalate on the same PR with the real error.
+- Send a PR to review only when CI is green.
+- Review level follows risk: trivial none, normal 1 round, security-sensitive 2 rounds with a different model family.
+- Never merge, tag or release without explicit human approval.
